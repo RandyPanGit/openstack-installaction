@@ -1,0 +1,2 @@
+# openstack-installaction
+利用VirtualBox安裝基本openstack
