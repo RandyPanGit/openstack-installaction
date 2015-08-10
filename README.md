@@ -48,3 +48,4 @@ Computer1
     IP address: 10.0.1.31
     Network mask: 255.255.255.0 (or /24)
     
+http://www.renhl.com/blog/openstack/deploy-openstack-on-ubuntu-14.04/
