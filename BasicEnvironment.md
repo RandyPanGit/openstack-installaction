@@ -9,6 +9,7 @@
 
 		 # apt-get install ntp
     **To configure the NTP service**
+    vi /etc/ntp.conf
 > server NTP_SERVER iburst <br />
 > restrict -4 default kod notrap nomodify <br />
 > restrict -6 default kod notrap nomodify <br />
@@ -22,13 +23,13 @@
 	
 	
 	Restart the NTP service:
-
-	># service ntp restart
+	
+		# service ntp restart
 	
 	
- 	- Other nodes
+ - Other nodes
 
-    	**To install the NTP service**
+    **To install the NTP service**
     	
     		 # apt-get install ntp
     
@@ -37,8 +38,20 @@
 	先修改/etc/ntp.conf，指向controller節點
 
 		 # server controller iburst
+		 
+	>**Note:**
+	Remove the /var/lib/ntp/ntp.conf.dhcp file if it exists.
 	
-	restart ntp
+	**restart ntp service**
 
 		 # service ntp restart
+	
+
+ - Verify operation
+**Run this command on the controller node:**
+	# ntpq -c peers
+     remote           refid      st t when poll reach   delay   offset  jitter
+==============================================================================
+*ntp-server1     192.0.2.11       2 u  169 1024  377    1.901   -0.611   5.483
++ntp-server2     192.0.2.12       2 u  887 1024  377    0.922   -0.246   2.864
 
