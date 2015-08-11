@@ -49,10 +49,10 @@
 
  - Verify operation
   
- **Run this command on the controller node:**
-	# ntpq -c peers
-  	remote  refid      st t when poll reach   delay   offset  jitter
-	**==============================================================**
-	*ntp-server1     192.0.2.11       2 u  169 1024  377    1.901   -0.611   5.483
-	+ntp-server2     192.0.2.12       2 u  887 1024  377    0.922   -0.246   2.864
+ **Run this command on the controller node:** <br />
+	# ntpq -c peers <br />
+  	remote  refid      st t when poll reach   delay   offset  jitter <br />
+	**==============================================================** <br />
+	*ntp-server1     192.0.2.11       2 u  169 1024  377    1.901   -0.611   5.483 <br />
+	+ntp-server2     192.0.2.12       2 u  887 1024  377    0.922   -0.246   2.864 <br />
 
