@@ -7,7 +7,7 @@
 
     **To install the NTP service**
 
-		> # apt-get install ntp
+		 # apt-get install ntp
     **To configure the NTP service**
 > server NTP_SERVER iburst <br />
 > restrict -4 default kod notrap nomodify <br />
@@ -30,16 +30,15 @@
 
     	**To install the NTP service**
     	
-    	> # apt-get install ntp
+    		 # apt-get install ntp
     
 	**To configure the NTP service**
 	
 	先修改/etc/ntp.conf，指向controller節點
 
-	> server controller iburst
-	
+		 # server controller iburst
 	
 	restart ntp
 
-	> # service ntp restart
+		 # service ntp restart
 
