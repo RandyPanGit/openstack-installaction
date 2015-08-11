@@ -9,9 +9,9 @@
 
 		> # apt-get install ntp
     **To configure the NTP service**
-> server NTP_SERVER iburst
-> restrict -4 default kod notrap nomodify
-> restrict -6 default kod notrap nomodify
+> server NTP_SERVER iburst <br />
+> restrict -4 default kod notrap nomodify <br />
+> restrict -6 default kod notrap nomodify <br />
 
 	NTP_SERVER 可以替換成其他的時間伺服器
 	>**Note:**
@@ -29,9 +29,11 @@
  	- Other nodes
 
     	**To install the NTP service**
+    	
     	> # apt-get install ntp
     
 	**To configure the NTP service**
+	
 	先修改/etc/ntp.conf，指向controller節點
 
 	> server controller iburst
@@ -39,5 +41,5 @@
 	
 	restart ntp
 
-	# service ntp restart
+	> # service ntp restart
 
