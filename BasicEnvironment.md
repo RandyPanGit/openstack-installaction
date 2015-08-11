@@ -74,6 +74,7 @@
 		*controller      192.0.2.21       3 u   47   64   37    0.308   -0.251   0.079
 		
 	**Run this command on all other nodes:**
+	
 		# ntpq -c assoc
 		ind assid status  conf reach auth condition  last_event cnt
 		===========================================================
