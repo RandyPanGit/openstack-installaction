@@ -56,7 +56,9 @@
 		**==============================================================** 
 		*ntp-server1     192.0.2.11       2 u  169 1024  377    1.901   -0.611   5.483 
 		+ntp-server2     192.0.2.12       2 u  887 1024  377    0.922   -0.246   2.864
+	
 	**Run this command on the controller node:**
+	
 		# ntpq -c assoc
 		ind assid status  conf reach auth condition  last_event cnt
 		**==============================================================**
