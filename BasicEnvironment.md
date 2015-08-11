@@ -19,7 +19,9 @@
 	
 	>**Note:**
 	Remove the /var/lib/ntp/ntp.conf.dhcp file if it exists.
+Restart the NTP service:
 
+># service ntp restart
  - Other nodes
 
     **To install the NTP service**
