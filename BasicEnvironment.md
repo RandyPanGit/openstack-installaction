@@ -64,4 +64,18 @@
 		==============================================================
 		1 20487  961a   yes   yes  none  sys.peer    sys_peer  1
 		2 20488  941a   yes   yes  none candidate    sys_peer  1
+		
+	
+	**Run this command on all other nodes:**
+	
+		# ntpq -c peers
+		remote           refid      st t when poll reach   delay   offset  jitter
+		==============================================================================
+		*controller      192.0.2.21       3 u   47   64   37    0.308   -0.251   0.079
+		
+	**Run this command on all other nodes:**
+		# ntpq -c assoc
+		ind assid status  conf reach auth condition  last_event cnt
+		===========================================================
+		1 21181  963a   yes   yes  none  sys.peer    sys_peer  3
 
