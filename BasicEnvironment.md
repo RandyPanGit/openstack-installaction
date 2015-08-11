@@ -53,7 +53,7 @@
 
 		# ntpq -c peers 
   		remote  refid      st t when poll reach   delay   offset  jitter 
-		**==============================================================** 
+		============================================================== 
 		*ntp-server1     192.0.2.11       2 u  169 1024  377    1.901   -0.611   5.483 
 		+ntp-server2     192.0.2.12       2 u  887 1024  377    0.922   -0.246   2.864
 	
@@ -61,7 +61,7 @@
 	
 		# ntpq -c assoc
 		ind assid status  conf reach auth condition  last_event cnt
-		**==============================================================**
+		==============================================================
 		1 20487  961a   yes   yes  none  sys.peer    sys_peer  1
 		2 20488  941a   yes   yes  none candidate    sys_peer  1
 
