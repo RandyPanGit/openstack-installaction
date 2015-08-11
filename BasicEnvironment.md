@@ -21,19 +21,23 @@
 	Remove the /var/lib/ntp/ntp.conf.dhcp file if it exists.
 	
 	
-Restart the NTP service:
+	Restart the NTP service:
 
-># service ntp restart
- - Other nodes
+	># service ntp restart
+	
+	
+ 	- Other nodes
 
-    **To install the NTP service**
-    > # apt-get install ntp
+    	**To install the NTP service**
+    	> # apt-get install ntp
     
 	**To configure the NTP service**
 	先修改/etc/ntp.conf，指向controller節點
 
 	> server controller iburst
-restart ntp
+	
+	
+	restart ntp
 
-# service ntp restart
+	# service ntp restart
 
