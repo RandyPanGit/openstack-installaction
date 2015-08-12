@@ -1,6 +1,6 @@
 ## Basic environment ##
 ----------
-**Install NTP**
+**Install NTP** <br />
 安裝NTP(Network Time Protocol)確保各節點間的服務可以正確同步
 
  - **Controller node**
@@ -79,4 +79,51 @@
 		ind assid status  conf reach auth condition  last_event cnt
 		===========================================================
 		1 21181  963a   yes   yes  none  sys.peer    sys_peer  3
+		
+**OpenStack packages**
+
+在所有節點執行以下步驟:
+
+- **To enable the OpenStack repository**
+
+	安裝Ubuntu Cloud的keyring和repository
+
+		# apt-get install ubuntu-cloud-keyring
+		# echo "deb http://ubuntu-cloud.archive.canonical.com/ubuntu" \
+		  "trusty-updates/kilo main" > /etc/apt/sources.list.d/cloudarchive-kilo.list
+- **To finalize installation**
+
+	Upgrade the packages on your system:
+	
+		# apt-get update && apt-get dist-upgrade
+		
+**SQL database**
+
+- To install and configure the database server
+
+	Install the packages:
+	
+		# apt-get install mariadb-server python-mysqldb
+		
+	Choose a suitable password for the database root account.
+	
+	In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
+
+Select Text
+
+[mysqld]
+...
+bind-address = 10.0.0.11
+In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
+
+Select Text
+
+[mysqld]
+...
+default-storage-engine = innodb
+innodb_file_per_table
+collation-server = utf8_general_ci
+init-connect = 'SET NAMES utf8'
+character-set-server = utf8
+	
 
