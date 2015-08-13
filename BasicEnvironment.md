@@ -1,6 +1,7 @@
 ## Basic environment ##
-----------
+=============================
 **Install NTP** <br />
+-----------------------
 安裝NTP(Network Time Protocol)確保各節點間的服務可以正確同步
 
  - **Controller node**
