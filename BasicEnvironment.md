@@ -100,13 +100,13 @@
 		
 ## SQL database
 
-- To install and configure the database server
+- **To install and configure the database server**
 
-	Install the packages:
+	1.Install the packages:
 	
 		# apt-get install mariadb-server python-mysqldb
 		
-	Choose a suitable password for the database root account.
+	2.Choose a suitable password for the database root account.
 	
 	In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
 
