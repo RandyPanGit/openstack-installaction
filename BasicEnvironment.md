@@ -103,8 +103,8 @@
 - **To install and configure the database server**
 
 	1. Install the packages:
-	
-		# apt-get install mariadb-server python-mysqldb
+
+			# apt-get install mariadb-server python-mysqldb
 		
 	2. Choose a suitable password for the database root account.
 	3. Edit the /etc/mysql/mysqld.cnf file and complete the following actions:
