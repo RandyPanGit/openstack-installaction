@@ -110,22 +110,19 @@
 	3. Edit the /etc/mysql/mysqld.cnf file and complete the following actions:
 	
 		1. In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
-
-Select Text
-
-[mysqld]
-...
-bind-address = 10.0.0.11
-In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
-
-Select Text
-
-[mysqld]
-...
-default-storage-engine = innodb
-innodb_file_per_table
-collation-server = utf8_general_ci
-init-connect = 'SET NAMES utf8'
-character-set-server = utf8
+		
+				[mysqld]
+				...
+				bind-address = 10.0.0.11
+				In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
+		2. In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
+		 
+				[mysqld]
+				...
+				default-storage-engine = innodb
+				innodb_file_per_table
+				collation-server = utf8_general_ci
+				init-connect = 'SET NAMES utf8'
+				character-set-server = utf8
 	
 
