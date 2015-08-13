@@ -108,7 +108,8 @@
 		
 	2. Choose a suitable password for the database root account.
 	3. Edit the /etc/mysql/mysqld.cnf file and complete the following actions:
-		a.In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
+	
+			a.In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
 
 Select Text
 
