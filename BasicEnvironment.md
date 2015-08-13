@@ -1,7 +1,7 @@
-## Basic environment ##
-=============================
-**Install NTP** <br />
------------------------
+# Basic environment 
+
+## **Install NTP**
+
 安裝NTP(Network Time Protocol)確保各節點間的服務可以正確同步
 
  - **Controller node**
@@ -81,7 +81,7 @@
 		===========================================================
 		1 21181  963a   yes   yes  none  sys.peer    sys_peer  3
 		
-**OpenStack packages**
+## OpenStack packages
 
 在所有節點執行以下步驟:
 
@@ -98,7 +98,7 @@
 	
 		# apt-get update && apt-get dist-upgrade
 		
-**SQL database**
+## SQL database
 
 - To install and configure the database server
 
