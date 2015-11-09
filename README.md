@@ -49,3 +49,4 @@ Computer1
     Network mask: 255.255.255.0 (or /24)
     
 http://www.renhl.com/blog/openstack/deploy-openstack-on-ubuntu-14.04/
+http://www.lijiaocn.com/blog/2014/08/17/OpenStack%E6%A6%82%E8%A7%88.html
