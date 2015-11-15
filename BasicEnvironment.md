@@ -1,4 +1,11 @@
 # Basic environment 
+## **網路設定**
+- **controller**
+	![enter image description here](https://goo.gl/EJxci5)
+- **network**
+	![enter image description here](https://goo.gl/Zfxv7E)
+- **compute**
+	![enter image description here](https://goo.gl/VNSjdd)
 
 ## **Install NTP**
 
