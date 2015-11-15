@@ -98,7 +98,7 @@
 
 		# apt-get install ubuntu-cloud-keyring
 		# echo "deb http://ubuntu-cloud.archive.canonical.com/ubuntu" \
-		  "trusty-updates/kilo main" > /etc/apt/sources.list.d/cloudarchive-kilo.list
+  			"trusty-updates/juno main" > /etc/apt/sources.list.d/cloudarchive-juno.list
 - **To finalize installation**
 
 	Upgrade the packages on your system:
@@ -113,16 +113,16 @@
 
 			# apt-get install mariadb-server python-mysqldb
 		
-	2. Choose a suitable password for the database root account.
-	3. Edit the /etc/mysql/mysqld.cnf file and complete the following actions:
+	2. 安裝過程中會出現輸入mysql root密碼，密碼：openstack.
+	3. 編輯/etc/mysql/mysqld.cnf:
 	
-		1. In the [mysqld] section, set the bind-address key to the management IP address of the controller node to enable access by other nodes via the management network:
-		
+		1. 在[mysqld]欄位下更改ip設定:
+
 				[mysqld]
 				...
-				bind-address = 10.0.0.11
-				In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
-		2. In the [mysqld] section, set the following keys to enable useful options and the UTF-8 character set:
+				bind-address = 10.10.10.10
+				
+		2. 然後新增以下內容:
 		 
 				[mysqld]
 				...
@@ -131,5 +131,17 @@
 				collation-server = utf8_general_ci
 				init-connect = 'SET NAMES utf8'
 				character-set-server = utf8
+	4. 重啟mysql
+	
+			# service mysql restart
+	5 執行以下命令，依據提示輸入即可：
+
+			# mysql_secure_installation
+			
+## Messaging Server
+
+- **在controller節點安裝RabbitMQ**
+
+	apt-get install rabbitmq-server
 	
 
