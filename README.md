@@ -21,12 +21,12 @@
 
 VirtualBox網路設定如下:
   新增三張「僅限主機網卡」，如下圖：
-  [](https://drive.google.com/file/d/0BwL8_rnFytxOeXFvZm5wazl6RVE/view?usp=sharing)
+  ![enter image description here](https://goo.gl/Tkanuv)
   三張網卡設定分別如下：
   vboxnet0
-  2
+  ![enter image description here](https://goo.gl/NkEm7v)
   vboxnet1
-  3
+  ![enter image description here](https://goo.gl/9zJk4S)
   vboxnet2
-  4
+  ![enter image description here](https://goo.gl/EEqMYA)
 
