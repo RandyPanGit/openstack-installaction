@@ -142,6 +142,19 @@
 
 - **在controller節點安裝RabbitMQ**
 
-	apt-get install rabbitmq-server
+		apt-get install rabbitmq-server
+- **修改密碼為openstack**
+
+		# rabbitmqctl change_password guest RABBIT_PASS
+		Changing password for user "guest" ...
+		...done.
+- **重啟mq**
+
+		# service rabbitmq-server restart
+- **檢查RabbittMQ版本**
+
+	如果版本為3.3.0以上則需配置允許guest帳號
+	
+		# rabbitmqctl status | grep rabbit
 	
 
