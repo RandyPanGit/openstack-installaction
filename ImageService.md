@@ -106,23 +106,23 @@
         ...
         flavor = keystone
         
-        **Note**:admin_password，此處替換為openstack
+   >**Note**:admin_password，此處替換為openstack
         
    3.在[glance_store]修改image儲存方式及存放路徑
     
-                [glance_store]
-                ...
-                default_store = file
-                filesystem_store_datadir = /var/lib/glance/images/
+        [glance_store]
+        ...
+        default_store = file
+        filesystem_store_datadir = /var/lib/glance/images/
                 
    4.在[DEFAULT]部分，配置noop通知驅動
     
-                [DEFAULT]
-                ...
-                notification_driver = noop
+        [DEFAULT]
+        ...
+        notification_driver = noop
                 
    5.在[DEFAULT]部分設定log紀錄
     
-                [DEFAULT]
-                ...
-                verbose = True
+        [DEFAULT]
+        ...
+        verbose = True
