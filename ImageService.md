@@ -84,7 +84,7 @@
 
 - **修改/etc/glance/glance-api.conf**
 
-    1. 在[database]處修改DB連線
+    1.在[database]處修改DB連線
         
                 [database]
                 ...
