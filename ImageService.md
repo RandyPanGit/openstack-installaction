@@ -84,4 +84,10 @@
 
 - **修改/etc/glance/glance-api.conf**
 
+    1. 在[database]處修改DB連線
         
+                [database]
+                ...
+                connection = mysql://glance:GLANCE_DBPASS@controller/glance
+
+        >**Note**:GLANCE_DBPASS為之前資料庫設定之值，此處替換為openstack
