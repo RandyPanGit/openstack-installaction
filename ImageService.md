@@ -84,44 +84,44 @@
 
 - **修改/etc/glance/glance-api.conf**
 
-    1.在[database]處修改DB連線
+   1.在[database]處修改DB連線
         
-                [database]
-                ...
-                connection = mysql://glance:GLANCE_DBPASS@controller/glance
+        [database]
+        ...
+        connection = mysql://glance:GLANCE_DBPASS@controller/glance
 
-        >**Note**:GLANCE_DBPASS為之前資料庫設定之值，此處替換為openstack
+   >**Note**:GLANCE_DBPASS為之前資料庫設定之值，此處替換為openstack
         
-    2.修改[keystone_authtoken] and [paste_deploy]
+   2.修改[keystone_authtoken] and [paste_deploy]
     
-                [keystone_authtoken]
-                ...
-                auth_uri = http://controller:5000/v2.0
-                identity_uri = http://controller:35357
-                admin_tenant_name = service
-                admin_user = glance
-                admin_password = openstack
+        [keystone_authtoken]
+        ...
+        auth_uri = http://controller:5000/v2.0
+        identity_uri = http://controller:35357
+        admin_tenant_name = service
+        admin_user = glance
+        admin_password = openstack
                 
-                [paste_deploy]
-                ...
-                flavor = keystone
-                
+        [paste_deploy]
+        ...
+        flavor = keystone
+        
         **Note**:admin_password，此處替換為openstack
         
-    3.在[glance_store]修改image儲存方式及存放路徑
+   3.在[glance_store]修改image儲存方式及存放路徑
     
                 [glance_store]
                 ...
                 default_store = file
                 filesystem_store_datadir = /var/lib/glance/images/
                 
-    4.在[DEFAULT]部分，配置noop通知驅動
+   4.在[DEFAULT]部分，配置noop通知驅動
     
                 [DEFAULT]
                 ...
                 notification_driver = noop
                 
-    5.在[DEFAULT]部分設定log紀錄
+   5.在[DEFAULT]部分設定log紀錄
     
                 [DEFAULT]
                 ...
