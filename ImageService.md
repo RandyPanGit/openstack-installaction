@@ -177,3 +177,45 @@
 ## 刪除預設SQLite database file
 
         # rm -f /var/lib/glance/glance.sqlite
+
+## 驗證
+
+- **建立image暫存資料夾**
+
+        $ mkdir /tmp/images
+
+- **下載image檔**
+
+        $ wget -P /tmp/images http://download.cirros-cloud.net/0.3.3/cirros-0.3.3-x86_64-disk.img
+        
+- **使用admin角色執行命令**
+
+        $ source admin-openrc.sh
+        
+- **上傳image至image service**
+
+        $ glance image-create --name "cirros-0.3.3-x86_64" --file /tmp/images/cirros-0.3.3-x86_64-disk.img \
+        --disk-format qcow2 --container-format bare --is-public True --progress
+        [=============================>] 100%
+        +------------------+--------------------------------------+
+        | Property         | Value                                |
+        +------------------+--------------------------------------+
+        | checksum         | 133eae9fb1c98f45894a4e60d8736619     |
+        | container_format | bare                                 |
+        | created_at       | 2014-10-10T13:14:42                  |
+        | deleted          | False                                |
+        | deleted_at       | None                                 |
+        | disk_format      | qcow2                                |
+        | id               | acafc7c0-40aa-4026-9673-b879898e1fc2 |
+        | is_public        | True                                 |
+        | min_disk         | 0                                    |
+        | min_ram          | 0                                    |
+        | name             | cirros-0.3.3-x86_64                  |
+        | owner            | ea8c352d253443118041c9c8b8416040     |
+        | protected        | False                                |
+        | size             | 13200896                             |
+        | status           | active                               |
+        | updated_at       | 2014-10-10T13:14:43                  |
+        | virtual_size     | None                                 |
+        +------------------+--------------------------------------+
+
