@@ -40,7 +40,7 @@
 
     >**Note**: --pass後請自行替換，此處替換為openstack
     
-- **將glance使用者賦予admin角色**
+- **將nova使用者賦予admin角色**
 
         $ keystone user-role-add --user nova --tenant service --role admin
         
@@ -57,3 +57,37 @@
     |     name    |               nova               |
     |     type    |             compute              |
     +-------------+----------------------------------+
+   
+## 建立nova service的endpoint
+
+    $ keystone endpoint-create \
+    --service-id $(keystone service-list | awk '/ compute / {print $2}') \
+    --publicurl http://controller:8774/v2/%\(tenant_id\)s \
+    --internalurl http://controller:8774/v2/%\(tenant_id\)s \
+    --adminurl http://controller:8774/v2/%\(tenant_id\)s \
+    --region regionOne
+    +-------------+-----------------------------------------+
+    |   Property  |                  Value                  |
+    +-------------+-----------------------------------------+
+    |   adminurl  | http://controller:8774/v2/%(tenant_id)s |
+    |      id     |    c397438bd82c41198ec1a9d85cb7cc74     |
+    | internalurl | http://controller:8774/v2/%(tenant_id)s |
+    |  publicurl  | http://controller:8774/v2/%(tenant_id)s |
+    |    region   |                regionOne                |
+    |  service_id |    6c7854f52ce84db795557ebc0373f6b9     |
+    +-------------+-----------------------------------------+
+    
+## 安裝nova service控制組件
+
+- **Install the packages:**
+
+        # apt-get install nova-api nova-cert nova-conductor nova-consoleauth \
+           nova-novncproxy nova-scheduler python-novaclient
+           
+- **編輯/etc/nova/nova.conf**
+
+    1. 在[database]部分，配置database連接
+        
+        [database]
+        ...
+        connection = mysql://nova:NOVA_DBPASS@controller/nova
