@@ -27,16 +27,16 @@
         
 - **建立openstack的nova使用者**
         
-      $ keystone user-create --name nova --pass NOVA_PASS
-      +----------+----------------------------------+
-      | Property |              Value               |
-      +----------+----------------------------------+
-      |  email   |                                  |
-      | enabled  |               True               |
-      |    id    | 387dd4f7e46d4f72965ee99c76ae748c |
-      |   name   |               nova               |
-      | username |               nova               |
-      +----------+----------------------------------+
+              $ keystone user-create --name nova --pass NOVA_PASS
+              +----------+----------------------------------+
+              | Property |              Value               |
+              +----------+----------------------------------+
+              |  email   |                                  |
+              | enabled  |               True               |
+              |    id    | 387dd4f7e46d4f72965ee99c76ae748c |
+              |   name   |               nova               |
+              | username |               nova               |
+              +----------+----------------------------------+
 
     >**Note**: --pass後請自行替換，此處替換為openstack
     
