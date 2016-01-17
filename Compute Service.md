@@ -88,6 +88,6 @@
 
     1. 在[database]部分，配置database連接
         
-        [database]
-        ...
-        connection = mysql://nova:NOVA_DBPASS@controller/nova
+            [database]
+            ...
+            connection = mysql://nova:NOVA_DBPASS@controller/nova
