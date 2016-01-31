@@ -91,3 +91,62 @@
             [database]
             ...
             connection = mysql://nova:NOVA_DBPASS@controller/nova
+        
+        >**Note**:NOVA_DBPASS請自行替換，此處替換為openstack
+        
+    2. 在[DEFAULT]部分配置RabbitMQ 設定
+    
+            [DEFAULT]
+            ...
+            rpc_backend = rabbit
+            rabbit_host = controller
+            rabbit_password = RABBIT_PASS
+            
+         >**Note**: Replace RABBIT_PASS with the password you chose for the guest account in RabbitMQ.
+         
+    3. 在[DEFAULT] 和 [keystone_authtoken]部分配置訪問認證
+    
+            [DEFAULT]
+            ...
+            auth_strategy = keystone
+ 
+            [keystone_authtoken]
+            ...
+            auth_uri = http://controller:5000/v2.0
+            identity_uri = http://controller:35357
+            admin_tenant_name = service
+            admin_user = nova
+            admin_password = NOVA_PASS
+            
+        >**Note**:NOVA_DBPASS請自行替換，此處替換為openstack
+        
+        >**Note**:註釋掉auth_host, auth_port, 和 auth_protocol
+        
+    4. 在 [DEFAULT]部分修改my_ip，配置為控制節點IP
+    
+            [DEFAULT]
+            ...
+            my_ip = 10.0.0.11
+            
+    5.在 [DEFAULT] 部分修改VNC設定
+    
+            [DEFAULT]
+            ...
+            vncserver_listen = 10.0.0.11
+            vncserver_proxyclient_address = 10.0.0.11
+            
+    6.在[glance]部分 配置image服務
+    
+            [glance]
+            ...
+            host = controller
+            
+    7.啟動Log詳細記錄
+    
+            [DEFAULT]
+            ...
+            verbose = True
+            
+- **初始化nova資料庫**
+
+        # su -s /bin/sh -c "nova-manage db sync" nova
