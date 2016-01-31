@@ -160,6 +160,6 @@
         # service nova-conductor restart
         # service nova-novncproxy restart
         
-- **移除預設SQLite
+- **移除預設SQLite**
 
         # rm -f /var/lib/nova/nova.sqlite
