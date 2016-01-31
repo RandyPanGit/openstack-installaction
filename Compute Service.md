@@ -128,25 +128,26 @@
             ...
             my_ip = 10.0.0.11
             
+    
     5.在 [DEFAULT] 部分修改VNC設定
     
             [DEFAULT]
             ...
             vncserver_listen = 10.0.0.11
             vncserver_proxyclient_address = 10.0.0.11
-            
+   
     6.在[glance]部分 配置image服務
     
             [glance]
             ...
             host = controller
-            
+    
     7.啟動Log詳細記錄
     
             [DEFAULT]
             ...
             verbose = True
-            
+    
 - **初始化nova資料庫**
 
         # su -s /bin/sh -c "nova-manage db sync" nova
