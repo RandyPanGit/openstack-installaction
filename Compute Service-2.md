@@ -30,10 +30,10 @@
         admin_user = nova
         admin_password = NOVA_PASS
       
-    >**Note**: 注釋其他 auth_host, auth_port, 和 auth_protocol，因為identity_uri已經配置
+     >**Note**: 注釋其他 auth_host, auth_port, 和 auth_protocol，因為identity_uri已經配置
     
     3.在[DEFAULT]部分配置，配置計算節點網路IP，在my_ip選項
-　
-　      [DEFAULT]
+
+        [DEFAULT]
         ...
         my_ip = 10.0.0.31
