@@ -37,3 +37,14 @@
         [DEFAULT]
         ...
         my_ip = 10.0.0.31
+        
+    4.在[DEFAULT]部分，啟用配置遠程訪問
+    
+        [DEFAULT]
+        ...
+        vnc_enabled = True
+        vncserver_listen = 0.0.0.0
+        vncserver_proxyclient_address = MANAGEMENT_INTERFACE_IP_ADDRESS
+        novncproxy_base_url = http://controller:6080/vnc_auto.html
+        
+     >**Note**:MANAGEMENT_INTERFACE_IP_ADDRESS替換為計算節點管理網路IP位址
