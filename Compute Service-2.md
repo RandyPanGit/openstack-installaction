@@ -48,3 +48,6 @@
         novncproxy_base_url = http://controller:6080/vnc_auto.html
         
      >**Note**:MANAGEMENT_INTERFACE_IP_ADDRESS替換為計算節點管理網路IP位址
+
+http://www.aboutyun.com/thread-11717-1-1.html
+http://docs.openstack.org/juno/install-guide/install/apt/content/ch_nova.html
