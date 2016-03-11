@@ -48,6 +48,13 @@
         novncproxy_base_url = http://controller:6080/vnc_auto.html
         
      >**Note**:MANAGEMENT_INTERFACE_IP_ADDRESS替換為計算節點管理網路IP位址
+     
+    5.在[glance]部分，配置Image服務的host
+    
+        [glance]
+        ...
+        host = controller
+    
 
 http://www.aboutyun.com/thread-11717-1-1.html
 http://docs.openstack.org/juno/install-guide/install/apt/content/ch_nova.html
