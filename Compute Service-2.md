@@ -54,7 +54,27 @@
         [glance]
         ...
         host = controller
+
+    6.在[DEFAULT]部分，開啟log紀錄設定
     
+        [DEFAULT]
+        ...
+        verbose = True
+        
+
+- **完成安裝**
+
+    1.測試虛擬機是否支援硬體加速
+        
+        egrep -c '(vmx|svm)' /proc/cpuinfo
+        
+     >**Note**:如果输出的不是0，那么不需要额外配置，如果输出的是0.则使用QEMU 代替KVM．
+    
+    1.1编辑文件/etc/nova/nova-compute.conf，在 [libvirt]部分，修改如下
+    
+        [libvirt]
+        ...
+        virt_type = qemu
 
 http://www.aboutyun.com/thread-11717-1-1.html
 http://docs.openstack.org/juno/install-guide/install/apt/content/ch_nova.html
