@@ -104,8 +104,4 @@
         +----+------------------+------------+----------+---------+-------+----------------------------+-----------------+
         
    >**Note**:建立虛擬機前須確認上述服務皆有正常啟動
-        
-        
 
-http://www.aboutyun.com/thread-11717-1-1.html
-http://docs.openstack.org/juno/install-guide/install/apt/content/ch_nova.html
