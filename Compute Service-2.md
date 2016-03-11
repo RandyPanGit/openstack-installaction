@@ -76,5 +76,15 @@
         ...
         virt_type = qemu
 
+    2.重啟Nova Service
+    
+        # service nova-compute restart
+        
+    3.如果存在SQLite 資料庫，則刪除
+    
+        rm -f /var/lib/nova/nova.sqlite
+        
+        
+
 http://www.aboutyun.com/thread-11717-1-1.html
 http://docs.openstack.org/juno/install-guide/install/apt/content/ch_nova.html
