@@ -105,3 +105,4 @@
         
    >**Note**:建立虛擬機前須確認上述服務皆有正常啟動
 
+https://laike9m.com/blog/pythonxiang-dui-dao-ru-ji-zhi-xiang-jie,60/
